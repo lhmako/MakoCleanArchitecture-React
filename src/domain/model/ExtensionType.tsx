@@ -1,0 +1,1 @@
+export type ExtensionType = "jpg" | "JPG" | "jpeg" | "JPEG" | "png" | "PNG";

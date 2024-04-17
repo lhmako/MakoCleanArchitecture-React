@@ -1,1 +1,1 @@
-export type { IFilmDataSource } from "./IFilmDataSource";
+export type { IComicDataSource } from "./IComicDataSource";

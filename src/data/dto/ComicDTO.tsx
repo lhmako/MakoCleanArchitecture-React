@@ -1,8 +1,8 @@
-import { ThumnailDTO } from "./ThumnailDTO";
+import { ThumbnailDTO } from "./ThumbnailDTO";
 
 export interface ComicDTO {
     id: string;
     title: string;
     description: string;
-    thumnail: ThumnailDTO;
+    thumnail: ThumbnailDTO;
 }

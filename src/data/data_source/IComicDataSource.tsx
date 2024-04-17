@@ -1,6 +1,6 @@
 import { ComicDTO } from "../dto";
 
-export interface IFilmDataSource {
+export interface IComicDataSource {
     getAll(): Promise<ComicDTO[]>;
     save(data: ComicDTO) : Promise<boolean>
 }

@@ -1,8 +1,8 @@
-import { IFilmDataSource } from "../../data_source";
+import { IComicDataSource } from "../../data_source";
 import { ComicDTO } from "../../dto";
 import { IHttp } from "../core/IHttp";
 
-export class FilmAxiosDataSource implements IFilmDataSource{
+export class FilmAxiosDataSource implements IComicDataSource {
     
     constructor(readonly http: IHttp){}
 
