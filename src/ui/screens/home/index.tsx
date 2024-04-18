@@ -1,17 +1,17 @@
+import { useEffect } from "react"
 import useComics from "../../hooks/comics.hook"
 import Component from "./Component"
-import { IHomePresenter } from "./IHomePresenter"
-
-export interface IHomeArgs{
-    presenter: IHomePresenter
-}
+import { IHomeArgs } from "./arguments"
 
 const Home = (args: IHomeArgs) => {
     
-    const {mutateAsync: loadComics} = useComics(args.presenter.loadComics())
-    //loadComics()
+    const {loadComics, comics} = useComics(args.presenter)
 
-    return <Component />
+    useEffect(()=>{
+        loadComics()
+    }, [args])
+
+    return <Component comics={comics}/>
 }
 
 export default Home
