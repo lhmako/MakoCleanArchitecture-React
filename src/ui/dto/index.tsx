@@ -1,0 +1,1 @@
+export type { ComicDTO } from "./ComicDTO";
