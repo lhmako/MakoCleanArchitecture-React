@@ -2,13 +2,13 @@ import {
     ComicModel,
     IHomeStory,
 } from "../..";
-import { IComicDataAdaper } from "../../adapters/IComicDataAdapter";
+import { IComicDataAdapter } from "../../adapters/IComicDataAdapter";
 import { IValidateComicsUseCase } from "../../usecases/IValidateComicsUseCase";
 
 export class HomeStory implements IHomeStory{
 
     constructor(
-        readonly comicDataAdaper: IComicDataAdaper,
+        readonly comicDataAdaper: IComicDataAdapter,
         readonly validateComicsUseCase: IValidateComicsUseCase
     ){}
 

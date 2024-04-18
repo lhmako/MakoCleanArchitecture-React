@@ -10,15 +10,15 @@ export class ComicDataAdaper implements IComicDataAdapter {
     async loadComics(): Promise<ComicModel[]> {
         const comicsDto = await this.comicRepository.getAll()
         const comicsModel: ComicModel[] = []
-        comicsDto.forEach((comicDTO) => {
+        comicsDto.map(comicDTO => {
             const comicModel: ComicModel = {
                 id: comicDTO.id,
                 title: comicDTO.title,
                 description: comicDTO.description,
-                thumnail: {
-                    id: comicDTO.thumnail.id,
-                    path: comicDTO.thumnail.path,
-                    extension: comicDTO.thumnail.extension as ExtensionType
+                thumbnail: {
+                    id: comicDTO.thumbnail.id ? comicDTO.thumbnail.id : comicDTO.id,
+                    path: comicDTO.thumbnail.path,
+                    extension: comicDTO.thumbnail.extension as ExtensionType
                 }
             }
             comicsModel.push(comicModel)

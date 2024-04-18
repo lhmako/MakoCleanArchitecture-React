@@ -1,3 +1,6 @@
-import App from "./App"
+import Home from "./screens/home"
 
-export default App
+export type { IHomePresenter } from "./screens/home/IHomePresenter"
+export {
+    Home,
+}

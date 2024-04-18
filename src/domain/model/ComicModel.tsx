@@ -4,5 +4,5 @@ export interface ComicModel {
     id: string;
     title: string;
     description: string;
-    thumnail: ThumbnailModel;
+    thumbnail: ThumbnailModel;
 }

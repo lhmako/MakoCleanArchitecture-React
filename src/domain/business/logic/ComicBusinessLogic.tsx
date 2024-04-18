@@ -10,8 +10,9 @@ export class ComicBusinessLogic {
     
     invoke(comicModel: ComicModel): boolean {
         const comicRule = new ComicRule(comicModel)
-        if(comicRule.thumbnailRule.isEmpty())
+        if(comicRule.thumbnailRule.isEmpty()){
             throw new Error(this.messageAdapter.thumbnailIsEmpty);
+        }
         if(comicRule.isEmpty())
             throw new Error(this.messageAdapter.comicIsEmpty);
         return true
